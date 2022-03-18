@@ -28,4 +28,6 @@ function fun(temp,i,srcpath) {
        console.log("   File ="+temp[i]);
        fun(temp,i+1,srcpath); 
 }
-tree("A:\\Web_Dev_FJP\\Projects\\File_Organiser\\downloads");
+module.exports={
+    tree:tree
+}

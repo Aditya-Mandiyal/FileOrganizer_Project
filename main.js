@@ -3,6 +3,7 @@ let fs_Module=require("fs");
 let path_Module=require("path");
 let helpModule=require("./commands/help");     
 let organizeModule=require("./commands/organize");     
+let treeModule=require("./commands/tree");     
 
 
 
@@ -29,7 +30,8 @@ switch (cmd)
         organizeModule.organize(path);
         break;
     case "tree":
-        console.log("tree"+path);
+        // console.log("tree"+path);
+        treeModule.tree(path);
         break;
     default:
         console.log("Invalid Cmd");
