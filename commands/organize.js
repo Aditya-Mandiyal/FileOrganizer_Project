@@ -78,6 +78,7 @@ function getFolderName(ext)
               return temp;
             }
      }
+     return "other";                          // edge case....
 
 }
 function copy(srcPath, fullPathOfFile, folderName)
