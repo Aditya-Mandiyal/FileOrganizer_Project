@@ -6,7 +6,7 @@ const process = require("process");
 
 //============================== Function "tree" which is the main function of this tree cmd option ===================//
 function tree(srcpath) {
-    console.log("Folder ->"+path.basename(srcpath));
+    console.log("|---Folder ->"+path.basename(srcpath));
     let temp=fs.readdirSync(srcpath);
     fun(temp,0,srcpath);
     return;
@@ -25,7 +25,7 @@ function fun(temp,i,srcpath) {
             tree(tempvar);
     }
     if(isFolder==false)
-       console.log("   File ="+temp[i]);
+       console.log("|__File ="+temp[i]);
        fun(temp,i+1,srcpath); 
 }
 module.exports={
